@@ -2,14 +2,14 @@
 # Should be run from project root dir (where .git is)
 #
 
-srcFile=$1
+srcFiles=$*
 
 if [ -z ${REMOTE_PATH+x} ]; then
   echo "REMOTE_PATH not set. Please export REMOTE_PATH=user@host:/path/to/remote/root"
   exit 1
 fi
 
-if [ "$srcFile" == "" ]; then
+if [ "$srcFiles" == "" ]; then
   cat <<EOF
   
 Copy file from a local project root to a remote project root exported by REMOTE_PATH.
@@ -30,4 +30,6 @@ EOF
   exit 1
 fi
 
-scp $srcFile $REMOTE_PATH/$srcFile
+for srcFile in $srcFiles; do 
+  scp $srcFile $REMOTE_PATH/$srcFile
+done

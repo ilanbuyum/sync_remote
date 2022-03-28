@@ -5,7 +5,7 @@ Copy file from a local project root to a remote project root exported by REMOTE_
 # Usage
 From the root of the local project run:
 ```
-sync-remote <SourceFile>
+sync-remote <SourceFile [SourceFiles...]>
 ```
 SourceFile should include the full relative path to its project root. 
 
