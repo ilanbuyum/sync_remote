@@ -11,9 +11,18 @@ SourceFile should include the full relative path to its project root.
 
 # Example
 Given the following:
+```
 REMOTE_PATH=user@host:/home/build/project 
 SourceFile=/home/build/proj1/module1/src/foo.c
-then running: sync-remote module1/src/foo.c
-from: /home/build/proj1
+```
+then running: 
+```
+sync-remote module1/src/foo.c
+```
+from:
+```
+/home/build/proj1
+```
 will result with: scp module1/src/foo.c user@host:/home/build/project/module1/src/foo.c
+
 Remote dir is assumed to exist.
