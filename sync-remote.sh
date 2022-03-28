@@ -14,7 +14,7 @@ if [ "$srcFiles" == "" ]; then
   
 Copy file from a local project root to a remote project root exported by REMOTE_PATH.
 
-Usage: sync-remote <SourceFile>
+Usage: sync-remote <SourceFile [SourceFiles...]>
 
 The command should be run from the root of the local project.
 SourceFile should include the full relative path to its project root. 
